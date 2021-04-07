@@ -29,16 +29,6 @@ router.route("/api/workouts/:id").put((req, res) => {
   res.json({ succses: true });
 });
 
-// router.post("/api/workouts/bulk", ({ body }, res) => {
-//   Workout.insertMany(body)
-//     .then((dbworkouts) => {
-//       res.json(dbworkouts);
-//     })
-//     .catch((err) => {
-//       res.status(400).json(err);
-//     });
-// });
-
 router.get("/api/excercise", (req, res) => {
   Workout.find({})
     .sort({ date: -1 })
